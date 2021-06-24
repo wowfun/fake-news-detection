@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>输入：</p>
+<form action='' method="POST"> {% csrf_token %}
+  <textarea class="form-control" rows="10" name="X_test">{{ x }}</textarea>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="model" id="inlineRadio1" value="BiLSTM">
+    <label class="form-check-label" for="inlineRadio1">BiLSTM</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="model" id="inlineRadio3" value="ERNIE">
+    <label class="form-check-label" for="inlineRadio3">ERNIE</label>
+  </div>
+  <br />
+  <input type="submit" value="提交">
+</form>
+<br />
+<p>结果-> {{ pred_result }}</p>
+{% endblock %}

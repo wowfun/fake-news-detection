@@ -1,2 +1,3 @@
 # dirs
 data/*.csv
+*.pyc
